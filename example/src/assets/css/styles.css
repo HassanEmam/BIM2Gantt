@@ -1,0 +1,458 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+html,
+body {
+    overflow: hidden;
+}
+
+select,
+button,
+input,
+textarea {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+:root {
+    --offset-top: 106px;
+    --heightTabItem: 26px;
+    --offset-cubeControl: 158px;
+}
+
+#three-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-warning,
+.btn-success {
+    margin: 0 5px!important;
+    padding: 5px!important
+}
+
+
+/* general */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-menu {
+    padding: 5px;
+    margin: 0 5px;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+
+/* View */
+
+.mainView {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    outline: none;
+}
+
+.cubeView {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.mainView canvas,
+.cubeView canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Menu */
+
+.menu {
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+}
+
+.menuItemBtn {
+    padding: 2px;
+    margin: 2px!important;
+}
+
+.menuItemBtn:hover {
+    background: #e2d9d9
+}
+
+.menuItemBtn img {
+    width: 20px;
+    height: 20px
+}
+
+
+/* Search */
+
+.menuSearch {
+    width: 100%;
+    position: fixed;
+    top: 10px;
+}
+
+.btn-search {
+    margin: 0!important
+}
+
+.menuSearch .card {
+    background: rgb(135, 125, 125);
+}
+
+
+/* Process */
+
+.process {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+}
+
+
+/* Model Browser */
+
+.modelBrowserContent {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 70vh;
+    padding: 0;
+    background: rgb(58, 52, 52);
+}
+
+.modelBrowser {
+    position: fixed;
+    z-index: 10;
+}
+
+.modelBrowser .card-header {
+    cursor: move;
+}
+
+.modelBrowserTitle {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+}
+
+.modelCategory {
+    width: 400px;
+}
+
+.modelType {
+    width: 100%;
+}
+
+.btn.eyes,
+.btn.showObjectItem,
+.btn.objectItem {
+    font-size: 12px;
+    text-align: left;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    margin: 5px 0!important;
+    padding: 5px!important;
+    color: white;
+}
+
+.btn.showObjectItem,
+.btn.objectItem {
+    width: 250px;
+}
+
+.objectFilter {
+    cursor: pointer;
+}
+
+.objectItem:hover,
+.showObjectItem:hover {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 2s ease infinite;
+    color: white;
+}
+
+
+/* Chart */
+
+.chartContent {
+    width: 450px;
+    height: 450px;
+}
+
+.chartContent canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.form-select {
+    padding: 0 5px!important
+}
+
+
+/* mouseRight */
+
+.mouseRight-filter,
+.mouseRight {
+    position: absolute;
+    background: rgb(37, 35, 35);
+}
+
+.mouseRight-filter .card-body,
+.mouseRight .card-body {
+    padding: 5px 0 !important;
+    width: 150px;
+}
+
+.mouseRight-filter .btn,
+.mouseRight .btn {
+    width: 100%;
+    color: white;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.mouseRight-filter .btn:hover,
+.mouseRight .btn:hover {
+    background: rgb(175, 171, 171);
+    color: rgb(37, 35, 35);
+}
+
+.mouseRight-filter {
+    left: 100%;
+    top: 0
+}
+
+
+/* v2 */
+
+.side-menu {
+    z-index: 1;
+    position: fixed;
+    height: 100vh;
+}
+
+
+/* PROPERTY */
+
+.property {
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 0!important;
+    margin: 0 !important;
+    padding: 0!important;
+}
+
+.property .property-item {
+    width: 100%;
+    height: 50%;
+    border: 1px solid #7f8080;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.property-title,
+.property-group-title {
+    background: rgb(192, 189, 189);
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+.property-select-type {
+    width: 100%;
+    height: 50px;
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.property-group .table-responsive,
+.property-group table {
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.property-group table td {
+    margin: 0!important;
+    padding: 2px!important;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.property-group table tbody tr td select,
+.property-group table tbody tr td button,
+.property-group table tbody tr td input {
+    margin: 0!important;
+    padding: 0!important;
+    font-size: 12px!important;
+    line-height: 12px!important;
+    width: auto;
+}
+
+.property-group table tbody tr td {
+    width: 50%!important;
+}
+
+.propertyContent {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: auto;
+    max-width: 500px;
+    max-height: 70vh;
+    padding: 5px;
+}
+
+
+/* multiselect */
+
+.multiSelect {
+    position: fixed;
+    border: 1px dashed black;
+    z-index: 10;
+    background: transparent;
+}
+
+
+/* explore */
+
+.explore {
+    position: absolute;
+    top: -30px;
+    width: 150px;
+}
+
+
+/* Modal */
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    padding: 5px!important
+}
+
+.modal-body ul li button {
+    padding: 5px 0 !important
+}
+
+.modal-body {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.content {
+    padding: 5px;
+}
+
+
+/* Filter */
+
+.filter td {
+    padding: 0px!important;
+    line-height: 30px!important;
+    font-weight: 700;
+    align-items: center;
+}
+
+.filter tr th:nth-child(1),
+.filter tr th:nth-child(2),
+.filter tr th:nth-child(3) {
+    width: 150px;
+}
+
+.filter tr th:nth-child(4) {
+    width: 50px;
+}
+
+.filterItemName {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    max-width: 70px;
+    margin: 0 5px;
+}
+
+.filterSwitch {
+    height: 100%!important;
+    display: flex;
+    flex-direction: column;
+}
+
+.filterSwitch button {
+    margin-left: 0!important;
+    margin-right: 0!important;
+    margin-top: 100%!important;
+    margin-bottom: 100%!important;
+}
+
+
+/* .filter td input,
+.filter td select {
+    height: 30px;
+    margin: 0!important;
+    padding: 0 5px !important
+} */
+
+.listFilterItem {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 200px;
+    max-height: 800px;
+}
+
+.expressIDFilter {
+    text-align: center;
+    width: 100%;
+    color: blue;
+    padding: 2px 0 !important;
+    cursor: pointer;
+}
+
+.filterStorage {
+    cursor: pointer;
+}
+
+.filterStorage:hover,
+.expressIDFilter-active,
+.expressIDFilter:hover {
+    background: rgb(175, 171, 171);
+    color: rgb(37, 35, 35);
+}
